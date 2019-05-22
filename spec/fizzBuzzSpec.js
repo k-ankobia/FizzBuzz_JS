@@ -1,11 +1,28 @@
-describe("Fizzbuzz", function() {
-  var fizzbuzz;
+describe("FizzBuzz", function () {
+  var fizzBuzz;
 
-  beforeEach(function() {
-    fizzbuzz = new Fizzbuzz();
-  });
+  beforeEach(function () {
+      fizzBuzz = new FizzBuzz();
+  })
+  
+  describe('When playing fizzbuzz', function() {
+      
+    it("returns 'Fizz' when passed 3", function () {
+        expect(fizzBuzz.play(3)).toEqual('Fizz');
+    })
 
-it("should check if the number is divisible by 3", function() {
-  expect(fizzbuzz.isDivisibleByThree(3)).toBe(true);
-});
-});
+    it("returns 'Buzz' when passed 5", function () {
+        expect(fizzBuzz.play(5)).toEqual('Buzz');
+    })
+
+    it("returns 'FizzBuzz' when passed 15", function () {
+        expect(fizzBuzz.play(15)).toEqual('FizzBuzz');
+    })
+
+    it("returns a number i.e. 7 when passed 7", function () {
+        expect(fizzBuzz.play(7)).toEqual(7);
+    })
+
+  })
+
+})
